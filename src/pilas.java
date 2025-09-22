@@ -75,3 +75,38 @@ public class pilas {
                         System.out.println("No hay acciones para deshacer.");
                     }
                     break;
+//se agrega segunda parte de la continuacion realizado en grupo
+                case "3":
+                    if (!pilaDeshacer.isEmpty()) {
+                        String textoRehecho = pilaDeshacer.pop();
+                        pilaPrincipal.push(textoRehecho);
+                        System.out.println("Acción rehecha.");
+                    } else {
+                        System.out.println("No hay acciones para rehacer.");
+                    }
+                    break;
+
+                case "4":
+                    String actual = pilaPrincipal.peek();
+                    if (actual != null) {
+                        System.out.println("Texto actual: " + actual);
+                    } else {
+                        System.out.println("No hay texto escrito.");
+                    }
+                    break;
+
+//Se agrega la parte final realizado en grupo
+
+                case "5":
+                    salir = true;
+                    System.out.println("Saliendo del editor...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
+        }
+
+        scanner.close();
+    }
+}
