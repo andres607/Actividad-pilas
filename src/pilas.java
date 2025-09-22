@@ -95,7 +95,7 @@ public class pilas {
                     }
                     break;
 
-//Se agrega la parte final realizado todo en grupo
+//Se agrega la parte final realizado en grupo
 
                 case "5":
                     salir = true;
