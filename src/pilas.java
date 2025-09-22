@@ -94,3 +94,19 @@ public class pilas {
                         System.out.println("No hay texto escrito.");
                     }
                     break;
+
+//Se agrega la parte final realizado todo en grupo
+
+                case "5":
+                    salir = true;
+                    System.out.println("Saliendo del editor...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
+        }
+
+        scanner.close();
+    }
+}
