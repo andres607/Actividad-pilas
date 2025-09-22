@@ -55,4 +55,23 @@ public class pilas {
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
             String opcion = scanner.nextLine();
-        }
+
+//Se agrega primera parte de la continuacion realizado en grupo
+            switch (opcion) {
+                case "1":
+                    System.out.print("Ingrese texto: ");
+                    String texto = scanner.nextLine();
+                    pilaPrincipal.push(texto);
+
+                    pilaDeshacer = new Pila<>();
+                    break;
+
+                case "2":
+                    if (!pilaPrincipal.isEmpty()) {
+                        String textoDeshecho = pilaPrincipal.pop();
+                        pilaDeshacer.push(textoDeshecho);
+                        System.out.println("Última acción deshecha.");
+                    } else {
+                        System.out.println("No hay acciones para deshacer.");
+                    }
+                    break;
