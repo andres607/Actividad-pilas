@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//SE GREGA PRIMERA PARTE DEL CODIGO
 class Pila<T> {
     private Nodo<T> cima;
 
@@ -17,7 +18,7 @@ class Pila<T> {
         nuevo.siguiente = cima;
         cima = nuevo;
     }
-
+//SE AGREGA SEGUNDA PARTE DEL CODIGO
     public T pop() {
         if (isEmpty()) {
             return null;
@@ -36,3 +37,22 @@ class Pila<T> {
     }
 }
 
+//SE AGREGA TERCERA PARTE DEL CODIGO
+public class pilas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Pila<String> pilaPrincipal = new Pila<>();
+        Pila<String> pilaDeshacer = new Pila<>();
+
+        boolean salir = false;
+
+        while (!salir) {
+            System.out.println("\n===== EDITOR DE TEXTO =====");
+            System.out.println("1. Escribir texto");
+            System.out.println("2. Deshacer");
+            System.out.println("3. Rehacer");
+            System.out.println("4. Mostrar texto actual");
+            System.out.println("5. Salir");
+            System.out.print("Seleccione una opción: ");
+            String opcion = scanner.nextLine();
+        }
