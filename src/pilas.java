@@ -17,4 +17,22 @@ class Pila<T> {
         nuevo.siguiente = cima;
         cima = nuevo;
     }
+
+    public T pop() {
+        if (isEmpty()) {
+            return null;
+        }
+        T dato = cima.dato;
+        cima = cima.siguiente;
+        return dato;
+    }
+
+    public T peek() {
+        return isEmpty() ? null : cima.dato;
+    }
+
+    public boolean isEmpty() {
+        return cima == null;
+    }
 }
+
